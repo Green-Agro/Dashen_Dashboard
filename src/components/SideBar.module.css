@@ -1,0 +1,20 @@
+.customMenuItem:hover {
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+  
+  
+  .customMenuItem:hover .anticon {
+    color: #fff; 
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+  
+  :global(.ant-menu-item-selected) {
+    background-color: #FFFFFF80 !important; 
+  }
+  
+  
+  .ant-menu-item-selected{
+    background-color: rgba(255, 255, 255, 0.5); /* Set the background color of the selected item when it is active */
+    color: #fff; /* Set icon color to white when hovered */
+  
+  }

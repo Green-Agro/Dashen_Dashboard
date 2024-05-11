@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  dashen_dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8012:4173
+    networks:
+      - dashen_dashboard_network
+    volumes:
+      - dashen_dashboard_volume:/app/uploads
+    # //restart: always
+
+networks:
+  dashen_dashboard_network:
+    driver: bridge
+
+volumes:
+  dashen_dashboard_volume:

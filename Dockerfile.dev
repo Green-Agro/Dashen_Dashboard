@@ -1,0 +1,26 @@
+FROM node:16.14.2
+
+ENV PORT 8012
+ENV NODE_ENV=dev
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json separately
+COPY package*.json ./
+
+# Install Node Dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Expose PORT
+EXPOSE ${PORT}
+
+# Launch Application
+CMD ["npm", "run", "build"]
+
+CMD ["npm", "run", "preview"]

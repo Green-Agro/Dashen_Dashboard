@@ -1,0 +1,10 @@
+.farmerDetailNav{
+    width: 95%;
+    max-width:60%;
+    max-height: 44%;
+    min-height: 38%;
+
+}
+.customtabs .ant-tabs-nav::before {
+    border-bottom: none;
+  }
